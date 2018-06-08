@@ -1,0 +1,237 @@
+html {
+	overflow-y: scroll;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #eaeaea;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.content {
+	max-width: 960px;
+	margin: 0px auto;
+	margin-top: 20px;
+	padding: 0px 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.menu {
+	width:300px;
+	
+}
+.menu_wrap {
+	background: #fff;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: inset 0px 0px 2px 0px #0092bd;
+}
+.curr_head {
+	margin: 15px 10px;
+	text-align: left;
+}
+
+
+
+.menu_currency_wrap {
+	margin: 0px auto;
+	
+	/*overflow: hidden;*/
+	
+	display: inline-block;
+	position: relative;
+}
+.menu_currency_list {
+	margin: 0px;
+	padding: 0px;
+	border-radius: 5px;
+	position: relative;
+	border: 1px #eaeaea solid;
+	display: inline-block;
+	/*overflow: hidden;*/
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #eaeaea;
+}
+.currency_item {
+	display: block;
+	padding: 5px 10px;
+	/*border: 2px #2792DD solid;*/
+	/*border-top: 1px #000 solid;
+	border-bottom: 1px #000 solid;
+	border-right: 1px #000 solid;*/
+	/*box-shadow: inset 0 0 0 1px #0092bd;*/
+	/*border-left: 1px #eaeaea solid;*/
+	margin-left: 1px;
+	color: #2792DD;
+	position: relative;
+	background: #fff;
+}
+.currency_item:first-child {
+	/*border-left: 1px #000 solid;*/
+	border-left: 0px #eaeaea solid;
+	border-radius: 5px 0px 0px 5px;
+	margin-left: 0px;
+}
+.currency_item:last-child {
+	border-radius: 0px 5px 5px 0px;
+}
+.currency_item:first-child.action {
+	border-left: 1px #2792DD solid;
+ }
+.currency_item.action {
+	margin: -1px -1px;
+	background: #2792DD;
+	color: #FFF;
+	/*border-top: 2px #2792DD solid;
+	border-right: 2px #2792DD solid;
+	*/
+	
+	border: 1px #2792DD solid;
+	border-left: 2px #2792DD solid;
+
+}
+.currency_item:first-child:hover {
+	padding: 5px 10px;
+ }
+.currency_item:hover {
+	background: #98CEF3;
+	margin: -1px -1px;
+	border: 1px #2792DD solid;
+	border-left: 1px #2792DD solid;
+	padding: 5px 10px;
+	padding-left: 11px;
+}
+.menu_transfer_list {
+	margin: 0px;
+	padding: 20px;
+	text-align: left;
+	color: #5e5e5e;
+}
+.transfer_item {
+	list-style: none;
+}
+.transfer_item:hover .transfer_only {
+	display: block;
+}
+.transfer_item.action .transfer_checkbox {
+	border: 1px #2792DD solid;
+	
+}.transfer_item .transfer_checkbox .fas {
+	visibility: hidden;
+	
+}.transfer_item.action .transfer_checkbox .fas {
+	visibility: visible;
+	
+}
+.transfer_checkbox {
+	display: inline-block;
+	line-height: 15px;
+	text-align: center;
+	width: 15px;
+	height: 15px;
+	border: 1px #eaeaea solid;
+	margin-right: 20px;
+	border-radius: 5px;
+	font-size: 0.7rem;
+	color: #2792DD;
+}
+
+.transfer_only {
+	text-align: right;
+	display: none;
+	float: right;
+	color: #2792DD;
+}
+
+
+
+.ticket {
+	background: #eee;
+	width: 100%;
+	margin-left: 100px;
+}
+.wrap_t_card {
+	text-align: left;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	background: #fff;
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 20px;
+
+}
+
+.l_side {
+	
+	width: 30%;
+	border-right: 2px #eee solid;
+	
+}
+.sale_btn {
+	margin: 10px;
+	padding: 10px;
+	background: #E6981D;
+	border-radius: 5px;
+	color: #fff;
+	text-align: center;
+	
+}
+.buy {
+	
+}
+.r_side {
+	padding-left: 20px;
+	width: 70%;
+	
+}
+.departure{
+	/*display: inline-block;*/
+	width: 33%;
+	float: left;
+}
+.stops {
+	/*display: inline-block;*/
+	width: 33%;
+	float: left;
+}
+.arrival {
+	/*display: inline-block;*/
+	width: 33%;
+	float: left;
+}
+
+
+.wrap_t_card {
+	box-shadow: inset 0px 0px 2px 0px #0092bd;
+}
+
+.r_side {
+	color: #333;
+}
+.arrival {
+	text-align: right;
+}
+.departure_time, .arrival_time {
+	font-size: 2rem;
+	margin-bottom: 10px;
+}
+.origin, .destination {
+	font-size: 0.9rem;
+	font-weight: bolder;
+	margin-bottom: 5px;
+}
+.departure_date, .arrival_date {
+	font-size: 0.9rem;
+}
+.stops {
+	text-align: center;
+}

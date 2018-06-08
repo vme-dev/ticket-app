@@ -1,0 +1,105 @@
+@media screen and (max-width: 1170px) {
+	
+}
+
+/* Landscape tablets and medium desktops */
+@media screen and (max-width: 991px) {
+	.ticket {
+		margin-left: 10px;
+	}
+}
+
+/* Portrait tablets and small desktops */
+@media screen and (max-width: 768px)  {
+	.content {
+		display: block;
+	}
+	.menu {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.curr_head {
+		text-align: center;
+	}
+	.menu_transfer_list {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		padding: 0px;
+	}
+	.transfer_item {
+		padding: 10px;
+	}
+	.curr_text {
+		display: block;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.transfer_checkbox {
+		display: block;
+		text-align: center;
+		margin: 0px auto;
+		margin-bottom: 10px;
+	}
+	.transfer_only {
+		display: block;
+		text-align: center;
+		float: none;
+		margin-bottom: 10px;
+	}
+
+	.ticket {
+		margin-left: 0px;
+	}
+}
+
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 576px) {
+	
+}
+
+/* Portrait phones and smaller */
+@media screen and (max-width: 480px) {
+	.menu_transfer_list {
+		display: block;
+		width: 210px;
+		margin: 0px auto;
+		text-align: left;
+	}
+	.curr_text {
+		display: inline-block;
+		text-align: left;
+		margin-bottom: 0px;
+	}
+	.transfer_checkbox {
+		display: inline-block;
+		text-align: center;
+
+		margin-right: 20px;
+		margin-bottom: 0px;
+	}
+	.transfer_only {
+		display: none;
+		text-align: right;
+		float: right;
+		margin-bottom: 0px;
+	}
+	.wrap_t_card {
+		display: flex;
+    	flex-direction: column-reverse;
+    	justify-content: space-between;
+	}
+	.l_side, .r_side {
+		width: 100%;
+		padding: 0px;
+	}
+	.l_side {
+		text-align: center;
+		border: 0px;
+	}
+}
+
+/* Iphone 5 */
+@media screen and (max-width: 320px) {
+	
+}
