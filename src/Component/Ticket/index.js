@@ -15,50 +15,32 @@ class Ticket extends Component {
     this.info;
     }
   componentWillMount() {
-    alert("1");
+
     let promise = new Promise((resolve, reject) => {
-
-    
-      // переведёт промис в состояние fulfilled с результатом "result"
       
-    var xhr = new XMLHttpRequest();
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', '/info.json', true);
+      xhr.send(); 
+      xhr.onreadystatechange = function() {
+       
+        if (xhr.readyState != 4) return;
 
-    xhr.open('GET', '/info.json', true);
-
-    xhr.send(); 
-
-    xhr.onreadystatechange = function() {
-     // (3)
-      if (xhr.readyState != 4) return;
-
-      if (xhr.status != 200) {
-        alert("err");
-      } else {
-        resolve(xhr.responseText);
+        if (xhr.status != 200) {
+          alert("err");
+        } else {
+          resolve(xhr.responseText);
+        }
       }
-    }
-
     });
 
-
-
-
-    promise
-  .then(
-    result => {
-      // первая функция-обработчик - запустится при вызове resolve
-      
-      this.props.load(result);
-       // result - аргумент resolve
-    },
-    error => {
-      // вторая функция - запустится при вызове reject
-      alert("Rejected: " + error); // error - аргумент reject
-    }
-  );
-
-
-
+    promise.then(
+      result => { 
+        this.props.load(result);
+      },
+      error => {
+        alert("Rejected: " + error);
+      }
+    );
   }
 
 	render () {
@@ -82,14 +64,12 @@ class Ticket extends Component {
     dataJSON.sort(cN);
 
     var all = this.props.index.all == undefined? true: this.props.index.all;
-    //alert(all.toString());
 
     var a = dataJSON.map((user) => {
 
       if ( (this.props.index.transferArr.indexOf(user.stops.toString()) != -1) || all ) {
         return <TicketCard  data={user} currency={this.props.index.currency} currencyName={this.props.index.currencyName}/>
       } 
-      
     })
 
 
