@@ -21,8 +21,8 @@ class Menu extends Component {
 		<div className="menu">
       <div className="menu_wrap">
 
-    		<Currency onClick={(e,value) => this.props.changeCurrency(e,value)} curr={this.props.index.counter.currencyName} />
-    		<Transfer onClick={(e,index) => this.props.changeStops(e,index)}  onClickAll={(e) => this.props.changeAll(e)} store={this.props.index.counter} onClickOnly={(index) => this.props.changeOnly(index)}/>
+    		<Currency onClick={(e,value) => this.props.changeCurrency(e,value)} curr={this.props.index.currencyName} />
+    		<Transfer onClick={(e,index) => this.props.changeStops(e,index)}  onClickAll={(e) => this.props.changeAll(e)} store={this.props.index} onClickOnly={(index) => this.props.changeOnly(index)}/>
     
 		  </div>
     </div>
@@ -31,7 +31,7 @@ class Menu extends Component {
 
 export default connect(
   (store) => {return {
-    index: store,
+    index: store.appState,
   }},
   (dispatch) => {return {
     changeStops: (e,index)     => { dispatch(action.CHANGE_STOPS(e,index)); },

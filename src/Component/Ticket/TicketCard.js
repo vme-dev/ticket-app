@@ -1,10 +1,11 @@
 import React from 'react';
-var p = "RUB";
+import logo from './logo_151.png';
+
 export default function (props) {
 	return (
 		<div className="wrap_t_card">
 			<div className="l_side">
-				<div className="img">image</div>
+				<img className="img" src={logo} />
 				<div className="sale_btn"><div className="buy">Buy</div> for <span>{(props.data.price * props.currency).toString()} {props.currencyName.toString()}</span> </div>
 			</div>
 			<div className="r_side">

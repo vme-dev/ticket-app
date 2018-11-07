@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
 import { connect } from 'react-redux';
-import {bindActionCreator} from 'redux';
 
 import * as action from "../../action.js";
 import TicketCard from './TicketCard';
@@ -65,7 +62,7 @@ class Ticket extends Component {
 
     var all = this.props.index.all == undefined? true: this.props.index.all;
 
-    var a = dataJSON.map((user) => {
+    var tickets = dataJSON.map((user) => {
 
       if ( (this.props.index.transferArr.indexOf(user.stops.toString()) != -1) || all ) {
         return <TicketCard  data={user} currency={this.props.index.currency} currencyName={this.props.index.currencyName}/>
@@ -76,7 +73,7 @@ class Ticket extends Component {
 		return (
 		<div className="ticket">
 
-			{a}
+			{tickets}
 
 		</div>)
   }
@@ -84,15 +81,12 @@ class Ticket extends Component {
 
 export default connect(
   (store) => {return {
-    index: store.counter,
+    index: store.appState,
   }},
   (dispatch) => {return {
     onTudaClick: (e)     => { dispatch(action.CHANGE_STOPS(e)); },
     loadData: (data)     => { dispatch(action.LOAD_DATA(data)); },
     load: (data)     => { dispatch(action.LOAD(data)); }
-    // onResetClick: ()    => { dispatch(action.RESET()); },
-    // onCheckDate: (date) => { dispatch(action.CHECK_CURR_DAY(date)); },
-    // onModal: ()         => { dispatch(action.togleModal()); }
   }}
   
   )(Ticket);

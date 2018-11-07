@@ -17,8 +17,7 @@ class App extends Component {
       <div className="App">
 
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Aviasales</h1>
         </header>
 
         <div className="content">
@@ -33,10 +32,9 @@ class App extends Component {
 
 export default connect(
   (store) => {return {
-    index: store.counter,
+    index: store.appState,
   }},
   (dispatch) => {return {
-    onTudaClick: (e)     => { dispatch(action.CHANGE_STOPS(e)); },
     loadData: (data)     => { dispatch(action.LOAD_DATA(data)); }
   }}
   

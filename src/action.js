@@ -14,10 +14,9 @@ export function CHANGE_ALL(e) {
 
     }
 };
-export function CHANGE_CURRENCY(e, value) {
+export function CHANGE_CURRENCY(value) {
 
     return {
-        target: e,
         type: 'CHANGE_CURRENCY',
         cuurName: value,
     }

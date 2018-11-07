@@ -1,6 +1,16 @@
 import { combineReducers } from 'redux';
 
-const counter = (state= { index: true, transferArr: [], all: true, currency: 1, currencyName: "rub", serverData: null, loadData: false,}, action) => {
+var initState = {
+    index: true, 
+    transferArr: [], 
+    all: true, 
+    currency: 1, 
+    currencyName: "rub", 
+    serverData: null, 
+    loadData: false,
+};
+
+const appState = (state =  initState , action) => {
 
     function toCheckTransferArr(arr) {
         
@@ -103,7 +113,7 @@ const counter = (state= { index: true, transferArr: [], all: true, currency: 1, 
 };
 
 const reduser = combineReducers({
-    counter,
+    appState,
 });
 
 export default reduser;

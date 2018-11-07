@@ -174,10 +174,15 @@ body {
 	
 	width: 30%;
 	border-right: 2px #eee solid;
+	text-align: center;
 	
 }
+.img	{
+	width: 100px;
+	height: auto;
+}
 .sale_btn {
-	margin: 10px;
+	margin: 0px 10px;
 	padding: 10px;
 	background: #E6981D;
 	border-radius: 5px;

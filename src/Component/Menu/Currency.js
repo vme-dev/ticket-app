@@ -6,9 +6,9 @@ export default function (props) {
 		<h3 className="curr_head">Currency</h3>
 		<div className="menu_currency_wrap">
 		<ul className='menu_currency_list'>
-			<li className={"currency_item " + (props.curr === "rub"?"action":"")} data-curr="rub" onClick={(e)=>{var a = e.target;props.onClick(a,"rub")}}>RUB</li>
-			<li className={"currency_item " + (props.curr === "usd"?"action":"")} onClick={(e)=>{var a = e.target;props.onClick(a,"usd")}}>USD</li>
-			<li className={"currency_item " + (props.curr === "eur"?"action":"")} onClick={(e)=>{var a = e.target;props.onClick(a,"eur")}}>EUR</li>
+			<li className={"currency_item " + (props.curr === "rub"?"action":"")} data-curr="rub" onClick={()=>{props.onClick("rub")}}>RUB</li>
+			<li className={"currency_item " + (props.curr === "usd"?"action":"")} onClick={()=>{props.onClick("usd")}}>USD</li>
+			<li className={"currency_item " + (props.curr === "eur"?"action":"")} onClick={()=>{props.onClick("eur")}}>EUR</li>
 
 		</ul></div></div>
 		);
