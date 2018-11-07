@@ -1,5 +1,5 @@
 
-`npm init`
+`npm instal`
 `npm start`
 
 
